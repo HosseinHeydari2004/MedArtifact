@@ -1,10 +1,10 @@
 # 🏥 MedArtifact
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![GitHub Stars](https://img.shields.io/github/stars/HosseinHeydari2004/medvision?style=flat&logo=github)](https://github.com/HosseinHeydari2004/medvision/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/HosseinHeydari2004/medvision?style=flat&logo=github)](https://github.com/HosseinHeydari2004/medvision/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/HosseinHeydari2004/medvision?style=flat&logo=git)](https://github.com/HosseinHeydari2004/medvision/commits/main)
-[![Repo Size](https://img.shields.io/github/repo-size/HosseinHeydari2004/medvision?style=flat&logo=github)](https://github.com/HosseinHeydari2004/medvision)
+[![GitHub Stars](https://img.shields.io/github/stars/HosseinHeydari2004/MedArtifact?style=flat&logo=github)](https://github.com/HosseinHeydari2004/MedArtifact/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/HosseinHeydari2004/MedArtifact?style=flat&logo=github)](https://github.com/HosseinHeydari2004/MedArtifact/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/HosseinHeydari2004/MedArtifact?style=flat&logo=git)](https://github.com/HosseinHeydari2004/MedArtifact/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/HosseinHeydari2004/MedArtifact?style=flat&logo=github)](https://github.com/HosseinHeydari2004/MedArtifact)
 [![Medical Imaging](https://img.shields.io/badge/Domain-Medical%20Imaging-red)](#)
 [![DICOM](https://img.shields.io/badge/Format-DICOM-orange)](#)
 [![NIfTI](https://img.shields.io/badge/Format-NIfTI-blue)](#)
@@ -23,11 +23,11 @@ It provides a structured preprocessing layer for medical imaging pipelines, targ
 - 🔵 Poor contrast
 - 🔴 Motion artifacts
 
-Instead of relying on scattered preprocessing scripts, `medvision` turns artifact handling into a **reproducible, measurable, and extensible engineering stage**.
+Instead of relying on scattered preprocessing scripts, `MedArtifact` turns artifact handling into a **reproducible, measurable, and extensible engineering stage**.
 
 ---
 
-## 🎯 Why medvision?
+## 🎯 Why MedArtifact?
 
 Medical imaging data is rarely perfect.
 
@@ -49,7 +49,7 @@ Unexpected Results
 
 This quickly becomes difficult to maintain, reproduce, test, and extend.
 
-`medvision` treats image-quality processing as a **first-class engineering layer**:
+`MedArtifact` treats image-quality processing as a **first-class engineering layer**:
 
 ```text
 Medical Image
@@ -116,7 +116,7 @@ The original image is not silently mutated.
 
 Different file formats should not force the rest of the pipeline to behave differently.
 
-`medvision` normalizes supported formats into a common internal representation:
+`MedArtifact` normalizes supported formats into a common internal representation:
 
 | Format | Support |
 |---|---:|
@@ -141,7 +141,7 @@ Spatial metadata such as affine information and format-specific headers can be p
 Process individual images or entire directories through the same I/O layer.
 
 ```python
-from medvision.io import IOPipeline
+from MedArtifact.io import IOPipeline
 
 pipeline = IOPipeline()
 
@@ -184,7 +184,7 @@ print(report_auto.summary())
 
 ## 🧠 Architecture
 
-`medvision` is built around a small set of explicit data contracts.
+`MedArtifact` is built around a small set of explicit data contracts.
 
 ```text
 ┌──────────────┐
@@ -302,7 +302,7 @@ This makes the processing history explicit and inspectable.
 ## 🏗️ Project Structure
 
 ```text
-medvision/
+MedArtifact/
 │
 ├── core/
 │   ├── medical_image.py
@@ -408,7 +408,7 @@ A new artifact can therefore be introduced without coupling it to the rest of th
 ### Load Images
 
 ```python
-from medvision.io import IOPipeline
+from MedArtifact.io import IOPipeline
 
 pipeline = IOPipeline()
 
@@ -508,7 +508,7 @@ This separation makes it possible to evaluate each stage independently.
 
 ## 🧪 Design Principles
 
-`medvision` is built around several engineering principles:
+`MedArtifact` is built around several engineering principles:
 
 ### 1. Detection before correction
 
@@ -570,11 +570,11 @@ The project is designed with error reporting, batch processing, validation, and 
 
 ## 📦 Installation
 
-`medvision` is currently developed directly from source and is not yet published as a PyPI package.
+`MedArtifact` is currently developed directly from source and is not yet published as a PyPI package.
 
 ```bash
-git clone https://github.com/HosseinHeydari2004/medvision.git
-cd medvision
+git clone https://github.com/HosseinHeydari2004/MedArtifact.git
+cd MedArtifact
 
 pip install -r requirements.txt
 ```
@@ -668,7 +668,7 @@ This document is the starting point for contributors working on the core pipelin
 
 ## 👥 Contributors
 
-`medvision` is developed collaboratively by engineers and researchers working across **AI, medical imaging, computer vision, and software engineering**.
+`MedArtifact` is developed collaboratively by engineers and researchers working across **AI, medical imaging, computer vision, and software engineering**.
 
 | Contributor | Focus |
 |---|---|
@@ -684,13 +684,13 @@ This document is the starting point for contributors working on the core pipelin
 
 ## ⚠️ Project Status
 
-`medvision` is an **actively developed open-source engineering project**.
+`MedArtifact` is an **actively developed open-source engineering project**.
 
 The core architecture and data contracts provide the foundation of the system, while artifact detectors and correction algorithms are being implemented incrementally.
 
 The current repository should therefore be considered a **work in progress**, not a finished clinical or diagnostic product.
 
-`medvision` is intended as an engineering and research tool for medical image preprocessing. It is **not a medical device and should not be used for clinical diagnosis or treatment decisions without appropriate validation, regulatory review, and clinical oversight.**
+`MedArtifact` is intended as an engineering and research tool for medical image preprocessing. It is **not a medical device and should not be used for clinical diagnosis or treatment decisions without appropriate validation, regulatory review, and clinical oversight.**
 
 
 ---
@@ -705,7 +705,7 @@ Check the repository for the current licensing status before using or redistribu
 
 <div align="center">
 
-### 🏥 medvision
+### 🏥 MedArtifact
 
 **Clean the image before you blame the model.**
 
