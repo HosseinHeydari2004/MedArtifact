@@ -1,9 +1,9 @@
 from pathlib import Path
 import numpy as np
 import pydicom as pdm
-from medvision.__core.image import MedicalImage
+from medartifact.__core.image import MedicalImage
 from .base import BaseLoader
-from medvision.__exceptions.errro import ImageLoadError
+from medartifact.__exceptions.errro import ImageLoadError
 
 
 class DICOMLoader(BaseLoader):

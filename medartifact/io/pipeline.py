@@ -1,5 +1,5 @@
 """
-medvision.io.pipeline
+medartifact.io.pipeline
 =====================
 
 High-level I/O pipeline for medical images.
@@ -18,9 +18,9 @@ from typing import Iterable, Literal
 
 from tqdm import tqdm
 
-from medvision.__core import MedicalImage
-from medvision.io import PipelineLoader
-from medvision.io import PipelineWriter
+from medartifact.__core import MedicalImage
+from medartifact.io import PipelineLoader
+from medartifact.io import PipelineWriter
 
 # ---------------------------------------------------------------------------
 # Constants

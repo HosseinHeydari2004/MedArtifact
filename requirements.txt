@@ -5,6 +5,8 @@ nibabel
 pydicom
 Pillow
 
+tqdm
+
 scikit-image
 opencv-python
 
@@ -14,4 +16,3 @@ pydantic
 pyyaml
 
 typer
-pytest

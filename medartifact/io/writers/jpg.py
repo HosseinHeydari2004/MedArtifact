@@ -3,8 +3,8 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from medvision.__core import MedicalImage
-from medvision.__exceptions.errro import ImageWriteError
+from medartifact.__core import MedicalImage
+from medartifact.__exceptions.errro import ImageWriteError
 from .base import BaseWriter
 
 

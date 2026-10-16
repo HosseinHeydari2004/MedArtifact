@@ -3,8 +3,8 @@ from pathlib import Path
 import nibabel as nib
 import numpy as np
 
-from medvision.__core import MedicalImage
-from medvision.__exceptions.errro import ImageWriteError
+from medartifact.__core import MedicalImage
+from medartifact.__exceptions.errro import ImageWriteError
 from .base import BaseWriter
 
 

@@ -1,6 +1,6 @@
-# `medvision.core` — Shared Data Contracts
+# `MedArtifact.core` — Shared Data Contracts
 
-This document explains the data structures defined in `medvision/core/` and how every other module (`io`, `detectors`, `correctors`, `pipeline`) must use them. **Read this before writing a loader, detector, or corrector.**
+This document explains the data structures defined in `MedArtifact/core/` and how every other module (`io`, `detectors`, `correctors`, `pipeline`) must use them. **Read this before writing a loader, detector, or corrector.**
 
 The goal of `core/` is to give the whole project one consistent "language" for passing images and results between modules, so any detector/corrector/loader can be swapped in or out without breaking the pipeline.
 
@@ -8,7 +8,7 @@ The goal of `core/` is to give the whole project one consistent "language" for p
 
 ## 1. `MedicalImage` — the single data unit used everywhere
 
-Defined in `medvision/core/image.py`:
+Defined in `MedArtifact/core/image.py`:
 
 ```python
 @dataclass
@@ -38,7 +38,7 @@ class MedicalImage:
 
 ## 2. `DetectionResult` — what every detector returns
 
-Defined in `medvision/core/results.py`:
+Defined in `MedArtifact/core/results.py`:
 
 ```python
 @dataclass
@@ -100,8 +100,8 @@ Detectors and correctors should implement a shared abstract interface so the pip
 
 ```python
 from abc import ABC, abstractmethod
-from medvision.__core.image import MedicalImage
-from medvision.__core.results import DetectionResult, CorrectionResult
+from MedArtifact.__core.image import MedicalImage
+from MedArtifact.__core.results import DetectionResult, CorrectionResult
 
 
 class BaseDetector(ABC):
@@ -125,8 +125,8 @@ Every concrete detector/corrector should subclass the relevant base class and im
 1. **These dataclasses are frozen contracts.** If you need a new field, propose it first — the rest of the pipeline depends on the current shape.
 2. **Always import, never redefine:**
    ```python
-   from medvision.__core.image import MedicalImage
-   from medvision.__core.results import DetectionResult, CorrectionResult, PipelineResult
+   from MedArtifact.__core.image import MedicalImage
+   from MedArtifact.__core.results import DetectionResult, CorrectionResult, PipelineResult
    ```
 3. **Detectors report, correctors modify.** A detector must never touch `image.data`; a corrector must always return a new `MedicalImage`.
 4. **One detector = one `DetectionResult`. One corrector = one `CorrectionResult`.** Don't batch multiple artifact types into a single result object.
