@@ -1,4 +1,4 @@
-# 🏥 medvision
+# 🏥 MedArtifact
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![GitHub Stars](https://img.shields.io/github/stars/HosseinHeydari2004/medvision?style=flat&logo=github)](https://github.com/HosseinHeydari2004/medvision/stargazers)
@@ -14,7 +14,7 @@
 
 **Detect. Understand. Correct. Before Your Model Sees the Image.**
 
-`medvision` is a modular Python library for **detecting and correcting common medical image artifacts before they affect downstream AI and computer vision models**.
+`MedArtifact` is a modular Python library for **detecting and correcting common medical image artifacts before they affect downstream AI and computer vision models**.
 
 It provides a structured preprocessing layer for medical imaging pipelines, targeting artifacts such as:
 
